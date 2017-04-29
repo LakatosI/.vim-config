@@ -1,9 +1,14 @@
 execute pathogen#infect()
 
+"" Colouring
 filetype plugin indent on
 syntax enable
 set background=light
 colorscheme solarized
+
+"" Building
+"":command Build !./build
+set makeprg=./build
 
 set nocompatible
 set encoding=utf-8
