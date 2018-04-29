@@ -1,0 +1,21 @@
+[submodule "bundle/vim-compot"]
+	path = bundle/vim-compot
+	url = https://github.com/vim-erlang/vim-compot.git
+[submodule "bundle/vim-erlang-runtime"]
+	path = bundle/vim-erlang-runtime
+	url = https://github.com/vim-erlang/vim-erlang-runtime.git
+[submodule "bundle/vim-erlang-compiler"]
+	path = bundle/vim-erlang-compiler
+	url = https://github.com/vim-erlang/vim-erlang-compiler.git
+[submodule "bundle/vim-erlang-omnicomplete"]
+	path = bundle/vim-erlang-omnicomplete
+	url = https://github.com/vim-erlang/vim-erlang-omnicomplete.git
+[submodule "bundle/vim-erlang-tags"]
+	path = bundle/vim-erlang-tags
+	url = https://github.com/vim-erlang/vim-erlang-tags.git
+[submodule "bundle/erlang-motions.vim"]
+	path = bundle/erlang-motions.vim
+	url = https://github.com/edkolev/erlang-motions.vim.git
+[submodule ".packages/vimerl"]
+	path = .packages/vimerl
+	url = https://github.com/jimenezrick/vimerl.git
