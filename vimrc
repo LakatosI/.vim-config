@@ -1,32 +1,64 @@
 execute pathogen#infect()
 
-"" General editing stuff
-cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
+set nocompatible
 
-"" Colouring
+let mapleader=" "
+
+"" Colouring {{{
 filetype plugin indent on
 syntax enable
-"set background=light
-"colorscheme solarized
+" }}}
 
-"" Building
-"":command Build !./build
-"set makeprg=./build
+set tabstop=4
+"set expandtab "Disable tab expansion
 
-set nocompatible
-set encoding=utf-8
-set showcmd
+set number "Line numbers
+
+set showcmd "Shows last command
+
+"set cursorline "Highlight current line
+
 
 "" Searching
 set is
 set ic
 set hlsearch
 set smartcase
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
 
-"" Whitespace
-set nowrap
-set tabstop=4 shiftwidth=4
-set backspace=indent,eol,start
+set wildmenu "Visual autocomplete commands
+set lazyredraw "No redrawing for macros
 
-"" Erlang
-set runtimepath^=~/.vim/bundle/vim-erlang-runtime/
+set showmatch
+
+set foldenable "Enable folding
+set foldlevelstart=10
+set foldnestmax=10
+
+nnoremap <leader><tab> za
+set foldmethod=indent
+
+nnoremap B ^
+nnoremap E $
+
+" edit vimrc/zshrc and load vimrc bindings
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>ez :vsp ~/.zshrc<CR>
+nnoremap <leader>lv :source $MYVIMRC<CR>
+
+" save session
+nnoremap <leader>ss :mksession<CR>
+
+" save file
+nnoremap <leader>sf :w<CR>
+
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
+
+set modelines=1
+
+" vim:foldmethod=marker:foldlevel=0
